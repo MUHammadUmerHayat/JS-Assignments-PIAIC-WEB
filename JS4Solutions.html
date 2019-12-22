@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Getting the current date and time
+        //1
+        var currentDate = new Date();
+        document.write(currentDate + "<br>" + "<br>");
+
+        //Extracting parts of the date and time
+        //1
+        var a = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var month = currentDate.getMonth();
+        var b = a[month];
+        document.write("Current Month: " + b + "<br>" + "<br>");
+
+        //2
+        var c = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+        var day = currentDate.getDay();
+        var d = c[day];
+        document.write("Today is " + d + "<br>" + "<br>");
+
+
+        //Specifying a date and time
+
+        //1
+        var i = new Date() - new Date("June 18, 2019");
+        var j = i / (1000 * 60 * 60 * 24);
+        var k = Math.floor(j);
+        document.write(k + " days have passed since 1st Ramadan, 2019" + "<br>" + "<br>");
+
+        //Changing elements of a date and time
+
+        //1
+        var n = new Date("December 3, 2019");
+        document.write("Current Date: " + n + "<br>");
+        var p = n.setFullYear(1919);
+        document.write("100 years back, it was " + n + "<br> <br>");
+
+
+        //Functions
+        var firstName = prompt("Enter Your First Name");
+        var lastName = prompt("Enter Your Last name");
+        function userName(first, second) {
+            document.write("Welcome " + first + " " + second + "!");
+        }
+        userName(firstName, lastName);
+        document.write("<br>" + "<br>");
+
+        //Functions: passing them data
+        //1
+        function changeCase(string) {
+            var firstChar = string.slice(0, 1)
+            var changedCase = firstChar.toUpperCase();
+            var restChars = string.slice(1)
+            alert(changedCase + restChars)
+        }
+        changeCase("karachi")
+        
+        //2
+        function occ(word, letter) {
+            var w = 0;
+            for (var i = 0; i < word.length; i++) {
+                if (word.slice(i, ++i) == letter) {
+                    w++;
+                }
+            }
+            return w;
+        }
+        var p = occ(prompt("Enter some text"), prompt("Enter a letter"))
+
+        //Functions: passing data back from them
+        //1
+        var num1 = +prompt("Enter a number");
+        var num2 = +prompt("Enter a number");
+        var operator = prompt("Enter the operator");
+        var val;
+        function calcu(num1, num2, operator) {
+            if (operator == "+") {
+                val = num1 + num2;
+            }
+            else if (operator == "-") {
+                val = num1 - num2;
+            }
+            else if (operator == "*") {
+                val = num1 * num2;
+            }
+            else if (operator == "/") {
+                val = num1 / num2;
+            }
+            else if (operator == "%") {
+                val = num1 % num2;
+            }
+            return val;
+        }
+        document.write("Calculated Value: " + calcu(num1, num2, operator) + "</br>" + "</br>");
+
+    </script>
+</body>
+
+</html>

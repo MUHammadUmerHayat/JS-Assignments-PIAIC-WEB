@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //if statements
+    //1
+    var gender = prompt("what's your gender?");
+    if(gender === "Male"){alert("Good Morning, Sir.");}
+    if (gender === "Female"){alert("Good Morning, Ma'am.");}
+    //2
+    var char = prompt("Enter a vowel")
+    var vowels = prompt("Enter a aplabet");
+    if (vowels === "a"){
+        alert("It's a vowel");
+    } 
+    if(vowels === "e"){
+        alert("It's a vowel");
+    } 
+    if(vowels === "i"){
+        alert("It's a vowel");
+    }
+    if(vowels === "o"){
+        alert("It's a vowel");
+    } 
+    if(vowels === "u"){
+        alert("It's a vowel");
+    }
+
+    //if...else and else if statements
+    var signal = prompt("Enter the color of the traffic signal.");
+    if(signal === "Red"){alert("Must Stop");}
+    else if(signal === "Yellow"){alert("Ready to move");}
+    else if(signal === "Green"){alert("Move now");} 
+
+    //Comparison Operators
+    //1
+    var d = prompt("Enter a number");
+    if (d > 0){
+        alert("It's a positive number");
+    }
+    else if (d >= 0){
+        alert("The number is zero");
+    }
+    else if (d < 0){
+        alert("It's a Negative number");
+    }
+    //2
+    var correctPassword = "123js";
+    var user = prompt("Enter the password");
+    if (user === "") {
+        alert("Please enter your password")
+    }
+    else if (user === correctPassword) {
+        alert("Correct! The password you entered matches the original password");
+    }
+    else {
+        alert("Incorrect password")
+    } 
+
+    //Testing sets of conditions
+    var time = prompt("Enter the time in 24 hours formate");
+    if (time >= 0000 && time < 1200) {
+        alert("Good Morning!");
+    }
+    else if (time >= 1200 && time < 1700){
+        alert("Good Afternoon!")
+    }
+    else if (time >= 1700 && time < 2100 ){
+        alert('Good Evening!');
+    }
+    else if (time >= 2100 && time < 2359){
+        alert("Good night!")
+    } 
+
+    //Arrays
+    var studentName = ["Michael", "John", "Tony"];
+    var g =[];
+    var total1 = prompt("Student 1 total marks");
+    g.push(total1);
+    var total2 = prompt("Student 2 total marks");
+    g.push(total2);
+    var total3 = prompt("Student 3 total marks");
+    g.push(total3);
+    var total = 500;
+    var f =[];
+    var per1 = total1/total*100;
+    f.push(per1);
+    var per2 = total2/total*100;
+    f.push(per2);
+    var per3 = total3/total*100;
+    f.push(per3);
+    document.write("Score of "+studentName[0]+ " is "+ g[0]+". Percentage: "+f[0]+"%"+ "</br>");
+    document.write("Score of "+studentName[1]+ " is "+ g[1]+". Percentage: "+f[1]+"%"+ "</br>");
+    document.write("Score of "+studentName[2]+ " is "+ g[2]+". Percentage: "+f[2]+"%"+ "</br>"+ "</br>");
+    
+    //Arrays: adding and removing elements
+    //Arrays: removing, inserting, and extracting elements
+    //1
+    var colors = ["Pink","Yelow","Red"];
+    document.write(colors + "</br>");
+    //a
+    var h = prompt("What color you want to add at the begining?", "Orange");
+    colors.unshift(h);
+    document.write(colors + "</br>");
+    //b
+    var i = prompt("What colors you want to add at the end", "Purple");
+    colors.push(i);
+    document.write(colors + "</br>");
+    //c
+    colors.unshift("Black","Light Pink");
+    document.write(colors+ "</br>");
+    //d
+    colors.shift();
+    document.write(colors + "</br>");
+    //e
+    colors.pop();
+    document.write(colors + "</br>");
+    //f
+    var j = prompt("At which poistion you want to add the color?");
+    var k = prompt("And what color you want to add?", "Golden");
+    colors.splice(j,0,k);
+    document.write(colors+ "</br>");
+    //g
+    var position = prompt("At which Position you want to delete the color?");
+    var deleted = prompt("And how many colors you want to delete");
+    colors.splice(position,deleted);
+    document.write(colors+ "</br>"+ "</br>");
+
+    //2
+    var cities = ["Karachi","Lahore","Islamabad","Quetta","Peshawar"];
+    document.write("Cities list: "+ "</br>" + cities +"</br>"+ "</br>");
+    var selected = cities.slice(2,4);
+    document.write("Selected cities list: " + "</br>" + selected+ "</br>" + "</br>" );
+    
+    //3
+    var multiDArray = [["Piaci", "CNC", "Quater1"], ["Piaci", "BC", "Quater1"], ["Piaci", "AI", "Quater1"]]
+    
+    //for loops
+    //1
+    var table = prompt("Enter a number to show it's mupliplication table");
+    var lengthNum = prompt("Eneter the length of the multiplication table");
+    document.write("Multiplication table of " + table+ "</br>");
+    document.write("Length " + lengthNum+ "</br>"+ "</br>");
+    for (var b = 1; b <= lengthNum; b++){
+        document.write(table+" x "+ b + " = " + table*b + "</br>");
+    }
+    document.write("</br>");
+
+    //2
+    document.write("<h4>"+"Counting: "+"</h4>");
+    for (d = 1; d <=15; d++){
+        document.write(d+", ");
+    }
+    document.write("</br>");
+    document.write("<h4>"+"Reverse Counting: "+"</h4>");
+    for (e = 10; e <= 10 && e > 0; e--){
+        document.write(e+", ");
+    }
+    document.write("</br>");
+    document.write("<h4>"+"Even: "+"</h4>");
+    for(f = 0; f<=20 ; f=f+2){
+        document.write(f+", ");
+    }
+    document.write("</br>");
+    document.write("<h4>"+"Odd: "+"</h4>");
+    for(g = 1; g<=20 ; g=g+2){
+        document.write(g+", ");
+    }
+    document.write("</br>");
+    document.write("<h4>"+"Series: "+"</h4>");
+    for(h = 0; h <= 20; h= h+2){
+        if (h == 0){
+
+        }
+        else if(h > 0){
+          document.write(h+"k, ");
+        }
+        
+    } 
+
+    //3
+    var fruits = [apple, orange, banana, graps, mango];
+    var stop = prompt("Enter the stop value");
+    for (var m = 0; m<=5; m++){
+        if (stop == scores[m]){ ++m;
+            var copied = fruits.splice(0,m)
+            document.write(copied);
+            break;
+        }
+    }
+
+    //for loops: flags, Booleans, array length, and breaks
+    var sweets = ["Cake", "Apple pie", "Cookie", "Chips", "Patties"];
+    var search = prompt("Welcome! to the Bakery, What do you want to order Sir/Ma'am");
+    var matchFound = false;
+    for (var i = 0; i <= 4; i++){
+        if(search === sweets[i]){
+            matchFound = true;
+            document.write(search + " is available at index " + i + " in our bakery. ");
+            break;
+        }
+    } 
+    if(matchFound === false) {
+        document.write("We are Sorry, "+ search + " is not available in our bakery. ");
+    }
+
+    //for loops nested
+    var smallestnum = [24,53,78,91,12];
+    document.write("Array items: " +smallestnum+"</br>");
+    for (var k= 0; k <=4; k++){
+        if(smallestnum[k] < 20 ){
+            document.write("The smallest number is: " + smallestnum[k]);
+        }
+    }
+    var largestnum = [24,53,78,91,12];
+    document.write("Array items: " +largestnum+"</br>");
+    for (var j = 0; j<=4; j++){
+        if (largestnum[j] > 90 ){
+        document.write("The largest number is: "+ largestnum[j]);
+        }
+    }
+
+    //Challenge Solutions
+    //https://github.com/misbahsabrani/JS-Assignments-PIAIC-WEB/blob/master/ChallenegeSolutions.html
+    
+    </script>
+</body>
+</html>

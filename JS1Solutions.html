@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Alert
+
+    alert("Welcome To My Page")
+    alert("Hello, Mr Bean!! \n How are you?")
+    console.log(alert("Hello Misbah Here."))
+    
+    //Variable for Strings
+    //1
+    var message="Hello World";
+    alert(message);
+    
+    //2
+    var kk="Yah! I can write HTML content throught JavaScript";
+    document.write(kk);
+    
+    //Variables for Number
+    //1
+    var age=21;
+    var myAge = "I am "+age+" years old";
+    alert(myAge);
+    
+    //2
+    var birthYear = 1996;
+    var newbirthYear = "My birth year is "+ birthYear;
+    document.write(newbirthYear);
+
+    //Legal and Illegal Variables
+    
+    var heading= "Rules for naming JS variables";
+    document.write("<h1>"+heading+"</h1>");
+    var b = "Variable names can only contain numbers,letters,$,_.";
+    document.write(b);
+    document.write("</br>");
+    var c = "Variable must begins with a letter,$,_.";
+    document.write(c);
+    document.write("</br>");
+    var d = "Variable names are case sensitive.";
+    document.write(d);
+    document.write("</br>");
+    var e = "Variable names should not be JS keywords.";
+    document.write(e); 
+
+    //Math Expressions: familiar operators
+    var a;
+    document.write("Value after variable declaration is: ??");
+    document.write ("</br>");
+    var c =  5;
+    document.write("Initial value is: "+c);
+    document.write ("</br>");
+    var e = c + 1;
+    document.write("Value after increment is: "+e);
+    document.write ("</br>");
+    var g = e + 7;
+    document.write("Value after addition is: "+g);
+    document.write ("</br>")
+    var i= g - 1;
+    document.write("Value after decrement is: " +i);
+    document.write ("</br>");
+    var k = i % 3;
+    document.write("The remainder is : "+k);
+
+    //Math Expressions: unfamiliar operators
+    var a= 2, b= 1;
+    var result= --a - --b + ++b + b--;
+    --a;
+    --a - --b;
+    --a - --b + ++b;
+    --a - --b + ++b + b--;
+    document.write("a is: "+a+"</br>");
+    document.write("b is: "+b+"</br>");
+    document.write("Result is: "+ result+"</br>"+"</br>");
+
+    //Math Expressions: eliminating ambiguity
+    var celsiusTem= 25;
+    var C = (70-32)*5/9;
+    var FahrenheitTemp= 70; 
+    var F = (25*9/5)+32;
+    document.write("<h2>"+ "The Temperature Conventer" + "</h2>");
+    document.write(celsiusTem+"<sup>"+"o"+"</sup>"+"C"+" is "+ F+"<sup>"+"o"+"</sup>"+"F");
+    document.write ("</br>");
+    document.write(FahrenheitTemp+"<sup>"+"o"+"</sup>"+"F"+" is "+C+"<sup>"+"o"+"</sup>"+"C");
+
+    //Prompts
+    var name = prompt("What's your Name?");
+    alert("Thanks, "+name+"!");
+    
+    </script>
+</body>
+</html>

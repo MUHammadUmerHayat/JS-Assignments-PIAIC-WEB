@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Changing case
+        //1
+        var name = prompt("Enter your name");
+        var capCase = name.toUpperCase();
+        alert(capCase);
+
+        //2
+        var firstName = prompt("Enter your first name?");
+        var lastName = prompt("Enter your last name?");
+        var firstChar = firstName.slice(0, 1);
+        firstChar = firstChar.toUpperCase();
+        var firstChar1 = lastName.slice(0, 1);
+        firstChar1 = firstChar1.toUpperCase();
+        var otherChars = firstName.slice(1);
+        otherChars = otherChars.toLowerCase();
+        var otherChars1 = lastName.slice(1);
+        otherChars1 = otherChars1.toLowerCase();
+        var titleFirst = firstChar + otherChars;
+        var titleLast = firstChar1 + otherChars1;
+        alert("Welcome " + titleFirst + " " + titleLast + "!");
+
+
+        //Strings: measuring length and extracting parts
+        //1
+        var phoneName = prompt("Enter your favorite mobile phone model.");
+        var nameLength = phoneName.length;
+        document.write("My Favorite phone is: " + phoneName + "</br>" + "Length of string: " + nameLength);
+
+        //2
+        var country = "Pakistan";
+        var b = country.charAt(country.length - 1);
+        document.write("User input: " + country + "</br>" + "Last Character of input: " + b);
+
+
+        //Strings: finding segments
+        //1
+        var city = "Pakistani";
+        var n = city.indexOf("n");
+        document.write("String: " + city + "</br>" + "Index of 'n': " + n);
+        //2
+        var userName = prompt("Enter your valid usename");
+        for (var i = 0; i < userName.length; i++) {
+            if (userName.indexOf("@") !== -1 || userName.indexOf(".") !== -1 || userName.indexOf(",") !== -1 || userName.indexOf("!") !== -1) {
+                alert("Please eneter a valid username");
+                break;
+            }
+        }
+        //3
+        var text = "the quick brown fox jumps over the lazy dog";
+        var t = 0;
+        for (var i = 0; i < text.length; i++) {
+            if (text.slice(i, i + 3) === "the") {
+                t++;
+            }
+        }
+        document.write("Text: " + text + "</br>" + "There are " + t + " occurrences of word 'the' ");
+
+        //Strings: finding a character at a location
+        //1
+        var country = "Pakistani";
+        var i = country.charAt(3);
+        document.write("String: " + country + "</br>" + "Character at index 3: " + i);
+        document.write("</br>" + "</br>");
+
+        //Strings: replacing characters
+        //1
+        var city2 = "Hyderabad";
+        var cityreplace = city2.replace("Hyder", "Islam");
+        document.write("City " + city2 + "</br>" + "After replacement: " + cityreplace);
+        document.write("</br>" + "</br>");
+
+        //2
+        var message = "Ali and Sami are best friends. They play cricket and football together. ";
+        var messagereplace = message.replace(/and/g, "&");
+        document.write(message + "</br>" + "After replacement: " + messagereplace);
+
+        //Rounding numbers
+        //1
+        var a = prompt("Enter a positive floating point number");
+        var b = Math.round(a);
+        var c = Math.floor(a);
+        var d = Math.ceil(a);
+        document.write("number: " + a + "</br>" + "round off value: " + b + "</br>" + "floor value: " + c + "</br>" + "ceil value: " + d + "</br>" + "</br>");
+
+        //2
+        var a = prompt("Enter a negative floating point number");
+        var b = Math.round(a);
+        var c = Math.floor(a);
+        var d = Math.ceil(a);
+        document.write("number: " + a + "</br>" + "round off value: " + b + "</br>" + "floor value: " + c + "</br>" + "ceil value: " + d + "</br>" + "</br>");
+
+
+        //Generating random numbers
+        //1
+        var randomNumber = Math.random();
+        alert(randomNumber);
+
+        //2
+        var k = Math.random() * 2;
+        var o = k + 1;
+        var p = Math.floor(o);
+        if (p == 2) {
+            document.write("random coin value: Heads")
+        }
+        if (p == 1) {
+            document.write("random coin value: Tails")
+        }
+
+        //3
+        var t = prompt("Guess a number between 1 to 10");
+        var u = Math.random() * 10 + 1;
+        var v = Math.floor(u);
+        if (t == v) {
+            alert("Congratulation!");
+        }
+        else {
+            alert("Try Again");
+        }
+
+        //Converting strings to integers and decimals
+        //1
+        var w = prompt("Enter your weight");
+        var x = parseFloat(w);
+        document.write("The weigth of user is: " + x + " kilogram");
+
+        //Converting strings to numbers, numbers to strings
+        //1
+        var value = "472";
+        var value1 = +value;
+        var a = typeof value;
+        var b = typeof value1;
+        document.write("Value: " + value + "</br>" + "Type: " + a + "</br>" + "Value: " + value1 + "</br>" + "Type: " + b)
+
+        //2
+        var num = 35.36;
+        num = num.toString();
+        var num1 = num.replace(".", "");
+        document.write("Number: " + num + "</br>" + "Result: " + num1);
+
+        //Controlling the length of decimals
+        //1
+        var percentage = 30 / 45 * 100;
+        var per = percentage.toFixed(2);
+        document.write(per);
+        
+    </script>
+</body>
+
+</html>
